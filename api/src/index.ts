@@ -7,7 +7,7 @@ import express, { Request, Response } from "express";
 
 import { connectDB } from "./config/db";
 import { errorHandler } from "./middlewares/errorHandler.middleware";
-// import authRoutes from "./routes/auth.route";
+import authRoutes from "./routes/auth.route";
 // import imageRoutes from "./routes/image.route";
 
 dotenv.config();
@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 app.use("/uploads", express.static(path.join(__dirname, "../public/uploads")));
 
-// app.use("/api/auth", authRoutes);
+app.use("/api/auth", authRoutes);
 // app.use("/api/img", imageRoutes);
 
 app.use("/", (req: Request, res: Response) => {

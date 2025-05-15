@@ -11,6 +11,12 @@ export const userSchema = new Schema<UserDocument>({
     type: String,
     required: true,
   },
+  kycPhoto: {
+    type: String,
+  },
+  kycVideo: {
+    type: String,
+  },
   refreshToken: {
     type: String,
   },

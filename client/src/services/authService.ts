@@ -1,4 +1,4 @@
-import { authAxiosInstance } from "@/api/auth-axios.Instance";
+import { authAxiosInstance } from "@/api/authAxios.Instance";
 import type { IAxiosResponse, ILoginResponse } from "@/types/Response";
 
 export const loginUser = async ({
@@ -27,6 +27,12 @@ export const registerUser = async ({
     email,
     password,
   });
+
+  return response.data;
+};
+
+export const logoutUser = async () => {
+  const response = await authAxiosInstance.post("/logout");
 
   return response.data;
 };

@@ -1,4 +1,4 @@
-import { Messages } from "../constants/messages";
+import { ERROR_MESSAGES } from "../constants/messages";
 import { StatusCode } from "../constants/statusCodes";
 import { Request, Response, NextFunction } from "express";
 import { verifyAccessToken } from "../services/jwt.service";
@@ -17,7 +17,7 @@ export const verifyAuth = (req: Request, res: Response, next: NextFunction) => {
     if (!token) {
       res
         .status(StatusCode.UNAUTHORIZED)
-        .json({ message: Messages.TOKEN_MISSING });
+        .json({ message: ERROR_MESSAGES.TOKEN_MISSING });
       return;
     }
 
@@ -28,6 +28,6 @@ export const verifyAuth = (req: Request, res: Response, next: NextFunction) => {
   } catch (error) {
     res
       .status(StatusCode.UNAUTHORIZED)
-      .json({ message: Messages.TOKEN_EXPIRED });
+      .json({ message: ERROR_MESSAGES.TOKEN_EXPIRED });
   }
 };

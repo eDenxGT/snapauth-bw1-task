@@ -11,7 +11,6 @@ export const uploadKyc = async (req: Request, res: Response) => {
     const photo = (req as MulterRequest).files?.["photoBlob"]?.[0];
     const video = (req as MulterRequest).files?.["videoBlob"]?.[0];
     const userData = (req as CustomRequest).user;
-    console.log(photo, video);
 
     if (!photo || !video) {
       throw new AppError(ERROR_MESSAGES.INVALID_INPUT, StatusCode.BAD_REQUEST);

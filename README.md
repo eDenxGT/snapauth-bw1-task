@@ -22,12 +22,7 @@ SnapAuth is a robust full-stack web application designed for seamless Know Your 
 
 - 📱 Responsive design for all devices
 - 🔐 Secure authentication system with JWT
-- 👥 Role-based access control (Admin/User)
 - 📸 Image and video capture for identity verification
-- 🔄 Real-time verification status updates
-- 🔍 Admin dashboard for verification management
-- 📊 Analytics and reporting capabilities
-- 🌙 Dark/Light mode support
 
 ## 🧰 Tech Stack
 
@@ -36,14 +31,13 @@ SnapAuth is a robust full-stack web application designed for seamless Know Your 
 - **Styling**: TailwindCSS with custom components
 - **Forms**: Formik with Yup validation
 - **Media**: React Media Recorder for video capture
-- **State Management**: Context API
 - **HTTP Client**: Axios
 
 ### Backend
 - **Runtime**: Node.js
 - **Framework**: Express
 - **Language**: TypeScript
-- **Database**: MongoDB with Mongoose ODM
+- **Database**: MongoDB with Mongoose
 - **Authentication**: JWT (JSON Web Tokens)
 - **File Upload**: Multer middleware
 - **Validation**: express-validator
@@ -76,7 +70,7 @@ snapauth-bw1-task/
 
 ```bash
 git clone https://github.com/eDenxGT/snapauth-bw1-task.git
-cd snapauth
+cd snapauth-bw1-task
 ```
 
 ### Backend Setup
